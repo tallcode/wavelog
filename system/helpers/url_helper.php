@@ -84,7 +84,16 @@ if ( ! function_exists('base_url'))
 	 */
 	function base_url($uri = '', $protocol = NULL)
 	{
-		return get_instance()->config->base_url($uri, $protocol);
+		// return get_instance()->config->base_url($uri, $protocol);
+		$currentInstance =& get_instance();
+		$cdnUrl = $currentInstance->config->item('cdn_url');
+
+		$pattern = '/^assets/';
+
+		if (!empty($cdnUrl) && $uri && preg_match($pattern, $uri) ) {
+			return $cdnUrl . $uri;
+		}
+		return $currentInstance->config->base_url($uri, $protocol);
 	}
 }
 

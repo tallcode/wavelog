@@ -14,9 +14,9 @@ To use this widget insert this Element:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/<?php echo $theme; ?>/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/<?php echo $theme; ?>/overrides.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/general.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/'.$theme.'/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/'.$theme.'/overrides.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/general.css'); ?>">
 
     <title><?= "Wavelog On-Air widget"; ?></title>
     <style>
@@ -67,7 +67,7 @@ To use this widget insert this Element:
 <body>
     <div class="widget container d-flex">
         <div class="left-column">
-            <img class="widgetLogo" src="<?php echo base_url(); ?>assets/logo/<?php echo $this->optionslib->get_logo('header_logo', $theme); ?>.png" alt="Logo" />
+            <img class="widgetLogo" src="<?php echo base_url('assets/logo/'.$this->optionslib->get_logo('header_logo', $theme).'.png'); ?>" alt="Logo" />
         </div>
         <?php if (!isset($error)) { ?>
         <div class="right-column">

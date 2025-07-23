@@ -8,17 +8,17 @@
 
   <!-- Bootstrap CSS -->
   <?php if ($this->optionslib->get_theme()) { ?>
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/<?php echo $this->optionslib->get_theme(); ?>/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/general.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/<?php echo $this->optionslib->get_theme(); ?>/overrides.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/'.$this->optionslib->get_theme().'/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/general.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/'.$this->optionslib->get_theme().'/overrides.css'); ?>">
   <?php } ?>
 
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/fontawesome/css/all.min.css'); ?>">
 
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/js/leaflet/leaflet.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/js/leaflet/leaflet.css'); ?>" />
 
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/loading.min.css" />
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/ldbtn.min.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/loading.min.css'); ?>" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/ldbtn.min.css'); ?>" />
 
   <link rel="icon" href="<?php echo base_url(); ?>favicon.ico">
 

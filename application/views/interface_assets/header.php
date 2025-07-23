@@ -10,44 +10,44 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	<link rel="manifest" href="<?php echo base_url(); ?>manifest.json" />
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/buttons.dataTables.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/buttons.dataTables.min.css'); ?>" />
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/datatables.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/datatables.min.css'); ?>" />
 
 	<!-- Bootstrap CSS -->
 	<?php
 	$theme = $this->optionslib->get_theme();
 	if ($theme) { ?>
-		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-multiselect.css">
-		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/<?php echo $theme; ?>/bootstrap.min.css">
-		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/general.css">
-		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/selectize.bootstrap4.css" />
-		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-dialog.css" />
-		<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/<?php echo $theme; ?>/overrides.css">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-multiselect.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/'.$theme.'/bootstrap.min.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/general.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/selectize.bootstrap4.css'); ?>" />
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-dialog.css'); ?>" />
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/'.$theme.'/overrides.css'); ?>">
 	<?php } ?>
 
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="<?php echo base_url('assets/fontawesome/css/all.min.css'); ?>">
 
-	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="<?php echo base_url('assets/css/jquery.fancybox.min.css'); ?>" />
 
 	<!-- Maps -->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/js/leaflet/leaflet.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/js/leaflet/Control.FullScreen.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/js/leaflet/leaflet.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/js/leaflet/Control.FullScreen.css'); ?>" />
 
 	<?php if ($this->uri->segment(1) == "search" && $this->uri->segment(2) == "filter") { ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/query-builder.default.min.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/query-builder.default.min.css'); ?>" />
 	<?php } ?>
 
 	<?php if ($this->uri->segment(1) == "notes" && ($this->uri->segment(2) == "add" || $this->uri->segment(2) == "edit" || $this->uri->segment(2) == "view")) { ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/plugins/easymde/easymde.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/plugins/easymde/easymde.css'); ?>" />
 	<?php } ?>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/loading.min.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/ldbtn.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/loading.min.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/ldbtn.min.css'); ?>" />
 
 
 	<?php if ($this->uri->segment(1) == "sattimers") { ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/sattimers.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/sattimers.css'); ?>" />
 	<?php } ?>
 
 	<?php if (file_exists(APPPATH . '../assets/css/custom.css')) {
@@ -82,7 +82,7 @@
 <body dir="<?php echo $language['direction']; ?>">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light main-nav" id="header-menu">
 		<div class="container">
-			<a class="navbar-brand" href="<?php echo site_url(); ?>"><img class="headerLogo" src="<?php echo base_url(); ?>assets/logo/<?php echo $this->optionslib->get_logo('header_logo'); ?>.png" alt="Logo" /></a>
+			<a class="navbar-brand" href="<?php echo site_url(); ?>"><img class="headerLogo" src="<?php echo base_url('assets/logo/'.$this->optionslib->get_logo('header_logo').'.png'); ?>" alt="Logo" /></a>
 			<?php if (ENVIRONMENT == "development") { ?>
 				<span class="badge text-bg-danger me-1"><?= __("Developer Mode"); ?></span>
 			<?php } ?>
